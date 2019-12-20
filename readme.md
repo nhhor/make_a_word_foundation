@@ -26,8 +26,10 @@ This application was made as part of a coding project for Noah Horwitz, a studen
 
 |Spec|Input|Output|
 |-|-|-|
-|User should be able to add a new word to the Word object.|input `Test 3`|Test 3|
-|Routing should display all words when one or more are added.|input add: `Test 5a`,`Test 5b`|Test 5a, Test 5b|
+|User should be able to add new words to the app and it will display all words entered.|input add: `Test 3a`,`Test 3b`|Test 3a, Test 3b|
+|User should be able to click on a created word and add in the resulting view be able to add a new definition|click_on `Word5a`, fill_in `Definition5a`, click_on `Add definition` |Word Name: Word5a, Word Definitions: Definition5a|
+
+
 
 ## References
 
