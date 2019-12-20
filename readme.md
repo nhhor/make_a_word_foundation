@@ -29,12 +29,14 @@ This application was made as part of a coding project for Noah Horwitz, a studen
 |User should be able to **C**reate new words to the app and it will display (**R**ead) all words entered.|click_on `Add a new word`, fill_in `word_test`, click_on `Go!`|_word_test_|
 |User should be able to **U**pdate existing word(s).|click_on `word_test`, click_on `Edit word` fill_in `word_test2`, click_on `Update`| _word_test2_|
 |User should be able to **D**elete existing word(s).|click_on `word_test2`, click_on `Edit word` click_on `Delete word`| _There are currently no records to display._|
-|||
+||||
 |User should be able to click on a created word and in the resulting view be able to **C**reate a new definition for that word and it will display (**R**ead) all definitions entered.|... click_on `word_test2`, fill_in `definition_test`, click_on `Add definition` |Word Name: _word_test2_, Word Definitions: _definition_test_|
 |User should be able to click on a created definition and add in the resulting view be able to **U**pdate the definition.|... click_on `definition_test`, fill_in `definition_test2`, click_on `Update definition` |Word Name: _word_test2_, Word Definitions: _definition_test2_|
 |User should be able to click on a created definition and add in the resulting view be able to **D**elete the definition.|... click_on `definition_test2`, click_on `Delete definition` |Word Name: _word_test2_, Word Definitions: _..._|
 ||||
 ||||
+
+
 
 ## References
 

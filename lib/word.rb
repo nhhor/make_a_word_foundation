@@ -34,7 +34,7 @@ class Word
         @@words[id]
     end
 
-    def update(name) #CHANGE
+    def update(name)
         @name = (name != '') ? name : @name
     end
 
