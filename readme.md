@@ -26,15 +26,15 @@ This application was made as part of a coding project for Noah Horwitz, a studen
 
 |Spec|Input|Output|
 |-|-|-|
-|User should be able to add new words to the app and it will display all words entered.|input add: `Test 3a`,`Test 3b`|Test 3a, Test 3b|
-|User should be able to update existing word(s)|click_on `Word4a`, click_on `Edit word` fill_in `new word name`, click_on `Update` | "Word4a" => "new word name"|
-|User should be able to click on a created word and add in the resulting view be able to add a new definition|click_on `Word5a`, fill_in `Definition5a`, click_on `Add definition` |Word Name: Word5a, Word Definitions: Definition5a|
-|User should be able to click on a created definition and add in the resulting view be able to update or delete the definition|... click_on `Definition7a`, fill_in `Definition7b`, click_on `Update definition` |"Definition7a" => "Definition7b"|
-
-
-
-
-
+|User should be able to **C**reate new words to the app and it will display (**R**ead) all words entered.|click_on `Add a new word`, fill_in `word_test`, click_on `Go!`|_word_test_|
+|User should be able to **U**pdate existing word(s).|click_on `word_test`, click_on `Edit word` fill_in `word_test2`, click_on `Update`| _word_test2_|
+|User should be able to **D**elete existing word(s).|click_on `word_test2`, click_on `Edit word` click_on `Delete word`| _There are currently no records to display._|
+|||
+|User should be able to click on a created word and in the resulting view be able to **C**reate a new definition for that word and it will display (**R**ead) all definitions entered.|... click_on `word_test2`, fill_in `definition_test`, click_on `Add definition` |Word Name: _word_test2_, Word Definitions: _definition_test_|
+|User should be able to click on a created definition and add in the resulting view be able to **U**pdate the definition.|... click_on `definition_test`, fill_in `definition_test2`, click_on `Update definition` |Word Name: _word_test2_, Word Definitions: _definition_test2_|
+|User should be able to click on a created definition and add in the resulting view be able to **D**elete the definition.|... click_on `definition_test2`, click_on `Delete definition` |Word Name: _word_test2_, Word Definitions: _..._|
+||||
+||||
 
 ## References
 
