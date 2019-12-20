@@ -26,7 +26,7 @@ This application was made as part of a coding project for Noah Horwitz, a studen
 
 |Spec|Input|Output|
 |-|-|-|
-||||
+|User should be able to add a new word to the Word object.|input `test`|Test|
 
 ## References
 
