@@ -68,7 +68,7 @@ describe('(Test 2) Create a definition path', {:type => :feature}) do
       click_on('Edit word')
       fill_in('name', :with => 'updated_word')
       click_on('Update')
-      expect(page).to have_content('initial_word' && 'initial_word')
+      expect(page).to have_content('updated_word')
     end
   end
 
