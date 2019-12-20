@@ -27,7 +27,11 @@ This application was made as part of a coding project for Noah Horwitz, a studen
 |Spec|Input|Output|
 |-|-|-|
 |User should be able to add new words to the app and it will display all words entered.|input add: `Test 3a`,`Test 3b`|Test 3a, Test 3b|
+|User should be able to update existing word(s)|click_on `Word4a`, click_on `Edit word` fill_in `new word name`, click_on `Update` | "Word4a" => "new word name"|
 |User should be able to click on a created word and add in the resulting view be able to add a new definition|click_on `Word5a`, fill_in `Definition5a`, click_on `Add definition` |Word Name: Word5a, Word Definitions: Definition5a|
+
+
+
 
 
 
