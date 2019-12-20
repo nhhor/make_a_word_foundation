@@ -10,7 +10,7 @@ get('/') do
   erb(:words)
 end
 
-get ('/words') do
+get('/words') do
   if params["search"]
     @words = Word.search(params[:search])
   elsif params["sort"]
@@ -34,7 +34,7 @@ post('/words') do
   name = params[:word_name]
   word = Word.new(name, nil)
   word.save()
-  @words = Word.all() # Adding this line will fix the error.
+  @words = Word.all()
   erb(:words)
 end
 
