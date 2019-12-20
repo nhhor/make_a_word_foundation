@@ -15,13 +15,7 @@ describe '#Word' do
         end
       end
   
-      describe("(2) .all") do
-        it("returns an empty array when there are no words") do
-          expect(Word.all()).to(eq([]))
-        end
-      end
-      
-      describe("(3) #save") do
+      describe("(2) #save") do
         it("saves a word") do
           word1 = Word.new("Test 3", nil) # nil added as second argument
           word1.save()
@@ -30,7 +24,13 @@ describe '#Word' do
           expect(Word.all).to(eq([word1, word2]))
         end
       end
-    
+
+      describe("(3) .all") do
+        it("returns an empty array when there are no words") do
+          expect(Word.all()).to(eq([]))
+        end
+      end
+          
       describe("(4) .clear") do
         it("clears all words") do
           word1 = Word.new("Test 4", nil)
@@ -41,4 +41,6 @@ describe '#Word' do
           expect(Word.all).to(eq([]))
         end
       end
+
+      
   end

@@ -26,7 +26,8 @@ This application was made as part of a coding project for Noah Horwitz, a studen
 
 |Spec|Input|Output|
 |-|-|-|
-|User should be able to add a new word to the Word object.|input `test`|Test|
+|User should be able to add a new word to the Word object.|input `Test 3`|Test 3|
+|Routing should display all words when one or more are added.|input add: `Test 5a`,`Test 5b`|Test 5a, Test 5b|
 
 ## References
 
