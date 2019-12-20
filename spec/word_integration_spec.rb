@@ -37,11 +37,17 @@ describe('(Test 2) create a definition path', {:type => :feature}) do
       word.save
       definition = Definition.new("initial_definition", word.id, nil)
       definition.save
-
       visit("/words/#{word.id}")
- 
+
+      click_on('initial_definition')
+      fill_in('name', :with => 'updated_definition')
+      click_on('Update definition')
+
+
       expect(page).to have_content('initial_word' && 'initial_definition')
     end
   end
+
+
 
 end
