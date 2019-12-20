@@ -31,19 +31,29 @@ describe('(Test 2) create a definition path', {:type => :feature}) do
     end
   end
 
-  describe('(Test 3) update a word path', {:type => :feature}) do
+  describe('(Test 3) update a definition path', {:type => :feature}) do
     it('updates a word and then goes to the word page') do
       word = Word.new("initial_word", nil)
       word.save
       definition = Definition.new("initial_definition", word.id, nil)
       definition.save
       visit("/words/#{word.id}")
-
       click_on('initial_definition')
       fill_in('name', :with => 'updated_definition')
       click_on('Update definition')
+      expect(page).to have_content('initial_word' && 'updated_definition')
+    end
+  end
 
-
+  describe('(Test 4) delete a definition path', {:type => :feature}) do
+    it('Deletes a word and then goes to the word page') do
+      word = Word.new("initial_word", nil)
+      word.save
+      definition = Definition.new("initial_definition", word.id, nil)
+      definition.save
+      visit("/words/#{word.id}")
+      click_on('initial_definition')
+      click_on('Delete definition')
       expect(page).to have_content('initial_word' && 'updated_definition')
     end
   end
