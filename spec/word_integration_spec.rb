@@ -54,7 +54,7 @@ describe('(Test 2) create a definition path', {:type => :feature}) do
       visit("/words/#{word.id}")
       click_on('initial_definition')
       click_on('Delete definition')
-      expect(page).to have_content('initial_word' && 'updated_definition')
+      expect(page).not_to have_content('updated_definition')
     end
   end
 
