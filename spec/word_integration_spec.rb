@@ -10,7 +10,7 @@ before(:each) do
   Definition.clear()
 end
 
-describe('(Test 1) create a word path', {:type => :feature}) do
+describe('(Test 1) Create a word path', {:type => :feature}) do
   it('creates a word and then goes to the word page') do
     visit('/words')
     click_on('Add a new word')
@@ -20,7 +20,7 @@ describe('(Test 1) create a word path', {:type => :feature}) do
   end
 end
 
-describe('(Test 2) create a definition path', {:type => :feature}) do
+describe('(Test 2) Create a definition path', {:type => :feature}) do
     it('creates a word and then goes to the word page') do
       word = Word.new("test_word", nil)
       word.save
@@ -31,8 +31,8 @@ describe('(Test 2) create a definition path', {:type => :feature}) do
     end
   end
 
-  describe('(Test 3) update a definition path', {:type => :feature}) do
-    it('updates a word and then goes to the word page') do
+  describe('(Test 3) Update a definition path', {:type => :feature}) do
+    it('updates a definition and then goes to the word page') do
       word = Word.new("initial_word", nil)
       word.save
       definition = Definition.new("initial_definition", word.id, nil)
@@ -45,7 +45,7 @@ describe('(Test 2) create a definition path', {:type => :feature}) do
     end
   end
 
-  describe('(Test 4) delete a definition path', {:type => :feature}) do
+  describe('(Test 4) Delete a definition path', {:type => :feature}) do
     it('Deletes a word and then goes to the word page') do
       word = Word.new("initial_word", nil)
       word.save
@@ -58,6 +58,18 @@ describe('(Test 2) create a definition path', {:type => :feature}) do
     end
   end
 
-
+  describe('(Test 5) Update a word path', {:type => :feature}) do
+    it('updates a word and then goes to the word page') do
+      word = Word.new("initial_word", nil)
+      word.save
+      definition = Definition.new("initial_word", word.id, nil)
+      definition.save
+      visit("/words/#{word.id}")
+      click_on('Edit word')
+      fill_in('name', :with => 'updated_word')
+      click_on('Update')
+      expect(page).to have_content('initial_word' && 'initial_word')
+    end
+  end
 
 end
