@@ -79,8 +79,8 @@ describe('(Test 2) Create a definition path', {:type => :feature}) do
       definition = Definition.new("initial_definition", word.id, nil)
       definition.save
       visit("/words/#{word.id}")
-      click_on('initial_definition')
-      click_on('Delete definition')
+      click_on('Edit word')
+      click_on('Delete word')
       expect(page).not_to have_content('initial_word')
     end
   end
