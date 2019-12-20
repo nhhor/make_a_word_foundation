@@ -12,7 +12,7 @@ describe '#Definition' do
     @word.save()
   end
 
-  describe('#==') do
+  describe('(Test 1) #==') do
     it("is the same definition if it has the same attributes as another definition") do
       definition = Definition.new("Naima", @word.id, nil)
       definition2 = Definition.new("Naima", @word.id, nil)
@@ -20,7 +20,7 @@ describe '#Definition' do
     end
   end
 
-  describe('.all') do
+  describe('(Test 2) .all') do
     it("returns a list of all definitions") do
       definition = Definition.new("Giant Steps", @word.id, nil)
       definition.save()
@@ -30,7 +30,7 @@ describe '#Definition' do
     end
   end
 
-  describe('.clear') do
+  describe('(Test 3) .clear') do
     it("clears all definitions") do
       definition = Definition.new("Giant Steps", @word.id, nil)
       definition.save()
@@ -41,7 +41,7 @@ describe '#Definition' do
     end
   end
 
-  describe('#save') do
+  describe('(Test 4) #save') do
     it("saves a definition") do
       definition = Definition.new("Naima", @word.id, nil)
       definition.save()
@@ -49,7 +49,7 @@ describe '#Definition' do
     end
   end
 
-  describe('.find') do
+  describe('(Test 5) .find') do
     it("finds a definition by id") do
       definition = Definition.new("Giant Steps", @word.id, nil)
       definition.save()
@@ -59,7 +59,7 @@ describe '#Definition' do
     end
   end
 
-  describe('#update') do
+  describe('(Test 6) #update') do
     it("updates an definition by id") do
       definition = Definition.new("Naima", @word.id, nil)
       definition.save()
@@ -68,7 +68,7 @@ describe '#Definition' do
     end
   end
 
-  describe('#delete') do
+  describe('(Test 7) #delete') do
     it("deletes an definition by id") do
       definition = Definition.new("Giant Steps", @word.id, nil)
       definition.save()
@@ -79,7 +79,7 @@ describe '#Definition' do
     end
   end
 
-  describe('.find_by_word') do
+  describe('(Test 8) .find_by_word') do
     it("finds definitions for an word") do
       word2 = Word.new("Blue", nil)
       word2.save

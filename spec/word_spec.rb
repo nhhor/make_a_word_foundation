@@ -8,7 +8,7 @@ describe '#Word' do
     Definition.clear()
   end
 
-  describe('(1) #==') do
+  describe('(Test 1) #==') do
     it("is the same word if it has the same attributes as another word") do
       word1 = Word.new("Blue", nil)
       word2 = Word.new("Blue", nil)
@@ -22,7 +22,7 @@ describe '#Word' do
     end
   end
 
-  describe('(3) #save') do
+  describe('(Test 3) #save') do
     it("saves an word") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -32,7 +32,7 @@ describe '#Word' do
     end
   end
 
-  describe('(4) .clear') do
+  describe('(Test 4) .clear') do
     it("clears all words") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -43,7 +43,7 @@ describe '#Word' do
     end
   end
 
-  describe('(5) .find') do
+  describe('(Test 5) .find') do
     it("finds an word by id") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -53,7 +53,7 @@ describe '#Word' do
     end
   end
 
-  describe('(6) #update') do
+  describe('(Test 6) #update') do
     it("updates an word by id") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -62,7 +62,7 @@ describe '#Word' do
     end
   end
 
-  describe('(7) #delete') do
+  describe('(Test 7) #delete') do
     it("deletes an word by id") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -73,7 +73,7 @@ describe '#Word' do
     end
   end
 
-  describe('(8) .search') do
+  describe('(Test 8) .search') do
     it("Searches for matching words by name") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -86,7 +86,7 @@ describe '#Word' do
     end
   end
 
-  describe('(9) .sort') do
+  describe('(Test 9) .sort') do
     it('sorts by alphebetical order') do
     word1 = Word.new("Giant Steps", nil)
     word1.save()
@@ -98,7 +98,7 @@ describe '#Word' do
   end
 end
 
-describe('(10) #definitions') do
+describe('(Test 10) #definitions') do
     it("returns an word's definitions") do
       word1 = Word.new("Giant Steps", nil)
       word1.save()
@@ -109,6 +109,5 @@ describe('(10) #definitions') do
       expect(word1.definitions).to(eq([definition, definition2]))
     end
   end
-
 
 end
