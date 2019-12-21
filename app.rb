@@ -13,9 +13,6 @@ end
 get('/words') do
   if params["search"]
     @words = Word.search(params[:search])
-  elsif params["clear"]
-    @words = Word.clear()
-    Word.clear()
   elsif params["sort"]
     @words = Word.sort()
   else
