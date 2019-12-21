@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Make a Word Foundation</title>
+    <title>Make-A-Word Foundation</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/styles.css">
 
   </head>
   <body>
     <div class="container">
+
+      <h1>Make-A-Word Foundation</h1>
+      <p class="epicodus">of Epicodus</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <a href="/words"><p class="btn-lg btn-primary toolbar">Words</p></a>
+        </div>
+        <div class="col-md-4">
+          <p class="toolbar"></p>
+          <div></div>
+
+        </div>
+        <div class="col-md-4">
+          <a href="/words" action="/words" method="get"><p name="clear" class="btn-lg btn-primary toolbar">Clear All</p></a>
+        </div>
+      </div>
+      <hr>
+
+
       <%= yield %>
     </div>
   </body>
