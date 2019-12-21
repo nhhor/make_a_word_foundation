@@ -1,25 +1,46 @@
 <h2>Available Words</h2>
 
-<% if @words.any? %>
-<ul>
-  <% @words.each do |word| %>
-    <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
-  <% end %>
-</ul>
-<% else %>
-<p>There are currently no records to display.</p>
-<% end %>
 
-<a href="/words/new">Add a new word</a>
+<div class="row">
+  <div class="col-md-4">
+    <% if @words.any? %>
+    <ul>
+      <% @words.each do |word| %>
+        <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>There are currently no records to display.</p>
+    <% end %>
 
-<form action="/words" method="get">
-  <div class="form-group">
-    <label for="search">Search</label>
-    <input id="search" name="search" class="form-control" type="text">
+    <a href="/words/new" class="btn btn-lg btn-success">Add a new word</a>
   </div>
-  <button type="submit" class="btn">Go!</button>
-</form>
+  <div class="col-md-4">
+    <% if @words.any? %>
+      <form action="/words" method="get">
+        <button type="submit" name="sort" class="btn btn-lg btn-warning">Sort!</button>
+      </form>
+    <% else %>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+    <% if @words.any? %>
+    <form action="/words" method="get">
+      <div class="form-group">
+        <label for="search">Search</label>
+        <input id="search" name="search" class="form-control" type="text">
+      </div>
+      <button type="submit" class="btn btn-lg btn-danger">Go!</button>
+    </form>
+    <% else %>
+    <% end %>
+  </div>
+</div>
 
-<form action="/words" method="get">
-  <button type="submit" name="sort" class="btn">Sort!</button>
-</form>
+
+
+
+
+
+
+
