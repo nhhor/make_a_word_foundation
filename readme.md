@@ -7,6 +7,7 @@
 ## Description:
 This application was made as part of a coding project for Noah Horwitz, a student at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers based in Portland, OR. The project is designed to create an application that contains a Word class. The homepage of the app should list all words. When a word is clicked, it should lead to a page with the word's definitions. users should be able to add a word, and when viewing a word, be able to add, update or delete one or more definitions..
 
+This project is fully deployed on **Heroku** [here](https://make-a-word-foundation.herokuapp.com/)
 
 ## Setup/Installation instructions:
 * Click the `Clone or download` button and copy the link.
